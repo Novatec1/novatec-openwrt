@@ -213,8 +213,6 @@ ifeq ($(SUBTARGET),bcm2710)
   TARGET_DEVICES += feverwarn-gen2-rpi-3
 endif
 
-
-
 define Device/rpi-4
   DEVICE_MODEL := 4B/400/CM4
   DEVICE_VARIANT := (64bit)
