@@ -10,5 +10,20 @@
 # OpenWrt config
 include distroconfig.txt
 
+[pi4]
+dtoverlay=v4-fkms-v3d
+max_framebuffers=2
+
+
 [all]
 # Place your custom settings here.
+dtparam=i2c_arm=on
+dtparam=i2c0=on
+dtparam=i2c1=on
+dtparam=spi=on
+dtparam=i2s=on
+dtparam=audio=on
+dtoverlay=spi1-3cs
+core_freq=250
+dtoverlay=pi3-disable-bt
+#dtoverlay=w1-gpio,gpiopin=12
