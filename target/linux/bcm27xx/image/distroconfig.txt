@@ -13,3 +13,4 @@ dtoverlay=disable-bt
 [pi4]
 arm_boost=1
 #dtoverlay=disable-bt
+
