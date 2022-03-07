@@ -11,6 +11,5 @@ dtoverlay=disable-bt
 [pi3]
 #dtoverlay=disable-bt
 [pi4]
-# Run as fast as firmware / board allows
 arm_boost=1
 #dtoverlay=disable-bt
