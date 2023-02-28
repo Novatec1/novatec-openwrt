@@ -144,66 +144,6 @@ ifeq ($(SUBTARGET),bcm2710)
   TARGET_DEVICES += rpi-3
 endif
 
-define Device/feverwarn-gen1-rpi-3
-  DEVICE_MODEL := Feverwarn Generation 1
-  DEVICE_VARIANT := (64bit)
-#  DEVICE_ALT0_VENDOR := Raspberry Pi
-#  DEVICE_ALT0_MODEL := 2B-1.2
-#  DEVICE_ALT0_VARIANT := (64bit)
-  KERNEL_IMG := kernel8.img
-  DEVICE_DTS := \
-	broadcom/bcm2710-rpi-2-b \
-	broadcom/bcm2710-rpi-3-b broadcom/bcm2710-rpi-3-b-plus \
-	broadcom/bcm2710-rpi-cm3
-  SUPPORTED_DEVICES := \
-	rpi-3-b rpi-3-b-plus \
-	raspberrypi,2-model-b-rev2 \
-	raspberrypi,3-model-b raspberrypi,3-model-b-plus \
-	raspberrypi,3-compute-module raspberrypi,compute-module-3
-  DEVICE_PACKAGES := \
-	cypress-firmware-43430-sdio \
-	cypress-nvram-43430-sdio-rpi-3b \
-	cypress-firmware-43455-sdio \
-	cypress-nvram-43455-sdio-rpi-3b-plus \
-	kmod-brcmfmac wpad-basic-wolfssl \
-	fvw-gen1
-endef
-
-ifeq ($(SUBTARGET),bcm2710)
-  TARGET_DEVICES += feverwarn-gen1-rpi-3
-endif
-
-define Device/feverwarn-gen2-rpi-3
-  DEVICE_MODEL := Feverwarn Generation 2 
-  DEVICE_VARIANT := (64bit)
-#  DEVICE_ALT0_VENDOR := Raspberry Pi
-#  DEVICE_ALT0_MODEL := 2B-1.2
-#  DEVICE_ALT0_VARIANT := (64bit)
-  KERNEL_IMG := kernel8.img
-  DEVICE_DTS := \
-	broadcom/bcm2710-rpi-2-b \
-	broadcom/bcm2710-rpi-3-b broadcom/bcm2710-rpi-3-b-plus \
-	broadcom/bcm2710-rpi-cm3
-  SUPPORTED_DEVICES := \
-	rpi-3-b rpi-3-b-plus \
-	raspberrypi,2-model-b-rev2 \
-	raspberrypi,3-model-b raspberrypi,3-model-b-plus \
-	raspberrypi,3-compute-module raspberrypi,compute-module-3
-  DEVICE_PACKAGES := \
-	cypress-firmware-43430-sdio \
-	cypress-nvram-43430-sdio-rpi-3b \
-	cypress-firmware-43455-sdio \
-	cypress-nvram-43455-sdio-rpi-3b-plus \
-	kmod-brcmfmac wpad-basic-wolfssl \
-	fvw-gen2
-endef
-
-ifeq ($(SUBTARGET),bcm2710)
-  TARGET_DEVICES += feverwarn-gen2-rpi-3
-endif
-
-
-
 define Device/rpi-4
   DEVICE_MODEL := 4B/400/4CM
   DEVICE_VARIANT := (64bit)
