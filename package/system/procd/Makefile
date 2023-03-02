@@ -8,13 +8,13 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=procd
-PKG_RELEASE:=$(AUTORELEASE)
+PKG_RELEASE:=1
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL=$(PROJECT_GIT)/project/procd.git
-PKG_MIRROR_HASH:=af4ca76197b89943c85e4e2d27a1036f43337d475971d0041cb525bcbca075c1
-PKG_SOURCE_DATE:=2022-02-19
-PKG_SOURCE_VERSION:=ad652490d47916a27c01e3dd8f9eafcecbb4bc7f
+PKG_MIRROR_HASH:=75a92c01ef85f41dc7e0b77ac35f464fbe45942af02ca6847516c4ebf574c4a4
+PKG_SOURCE_DATE:=2023-01-16
+PKG_SOURCE_VERSION:=190f13a75e67e0bdb662188da79b8be31e0aae01
 CMAKE_INSTALL:=1
 
 PKG_LICENSE:=GPL-2.0
@@ -35,7 +35,6 @@ ifeq ($(DUMP),)
 endif
 
 CMAKE_OPTIONS += -DEARLY_PATH="$(TARGET_INIT_PATH)"
-TARGET_LDFLAGS += $(if $(CONFIG_USE_GLIBC),-lrt)
 
 TARGET_CFLAGS += -flto
 TARGET_LDFLAGS += -flto
@@ -43,7 +42,7 @@ TARGET_LDFLAGS += -flto
 define Package/procd/Default
   SECTION:=base
   CATEGORY:=Base system
-  DEPENDS:=+ubusd +ubus +libjson-script +ubox +USE_GLIBC:librt +libubox \
+  DEPENDS:=+ubusd +ubus +libjson-script +ubox +libubox \
 	  +libubus +libblobmsg-json +libjson-c +jshn
   TITLE:=OpenWrt system process manager
   USERID:=:dialout=20 :audio=29
