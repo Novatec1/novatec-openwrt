@@ -4,7 +4,7 @@
 
 ################################################################################
 # For overclocking and various other settings, see:
-# https://www.raspberrypi.com/documentation/computers/config_txt.html
+# https://www.raspberrypi.org/documentation/configuration/config-txt/README.md
 ################################################################################
 
 # OpenWrt config
@@ -25,6 +25,5 @@ dtparam=i2s=on
 dtparam=audio=on
 dtoverlay=spi1-3cs
 core_freq=250
-#dtoverlay=pi3-disable-bt
+dtoverlay=pi3-disable-bt
 #dtoverlay=w1-gpio,gpiopin=12
-
